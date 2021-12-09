@@ -21,7 +21,7 @@ public abstract class Memory {
 	}
 	
 	protected abstract void push(int num);
-	protected abstract int pop();
+	protected abstract void pop();
 	protected abstract void overflow();
 	protected abstract void underflow();
 }
