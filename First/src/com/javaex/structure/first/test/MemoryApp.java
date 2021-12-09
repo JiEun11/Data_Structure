@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MemoryApp {
 
 	public static void main(String[] args) {
-//Memory mq = new MyQueue();
+		Memory mq = new MyQueue();
 		Memory ms = new MyStack();
 
 		Scanner sc;
@@ -48,9 +48,9 @@ public class MemoryApp {
 						System.out.println("수를 입력하세요.");
 						int input_num = sc.nextInt();
 
-//              mq.push(input_num);
+						mq.push(input_num);
 					} else if (num2 == 2) {
-//              mq.pop();
+						mq.pop();
 						break;
 					} else {
 						break;

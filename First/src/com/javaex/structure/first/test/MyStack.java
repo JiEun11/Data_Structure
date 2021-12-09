@@ -4,16 +4,17 @@ public class MyStack extends Memory {
 
 	@Override
 	public void push(int num) {
-		if (pivot == array.length - 1) {
+		if (pivot == array.length ) {
 			overflow();
 		} else {
-			array[pivot++] = num;
+			array[pivot] = num;
+			pivot++;
 		}
 	}
 
 	@Override
 	public void pop() {
-		if (pivot == -1) {
+		if (pivot <= 0) {
 			underflow();
 		} else {
 			System.out.println("배열 값 추출:" + array[--pivot]); // 마지막 값 추출
