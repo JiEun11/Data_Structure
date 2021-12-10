@@ -1,15 +1,19 @@
 package com.javaex.structure.first.practice2;
 
-
-class Outter{
+class Outter {
 	private int num1 = 10;
 	static int num2 = 3;
 
-	static class Inner{
-		public void disp() {
+	public void output() {
+		
+		class Inner {
+			public void disp() {
 //			System.out.println(num1);
-			System.out.println(num2);
+				System.out.println(num2);
+			}
 		}
+		Inner in = new Inner();
+		in.disp();
 	}
 }
 
@@ -25,9 +29,13 @@ public class MemberInnerTest {
 //		Outter.Inner in = new Outter().new Inner();  // 강사님 답
 //		inner2.disp();
 		
-		Outter.Inner inner = new Outter.Inner();
-		inner.disp();
+//		Outter.Inner inner = new Outter.Inner();
+//		inner.disp();
 		
+//		<local inner class 연습>
+		Outter out = new Outter();
+		out.output();
+//		out.output() outinner = out.output().new Inner();
 	}
 
 }
