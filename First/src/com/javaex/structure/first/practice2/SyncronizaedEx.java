@@ -14,6 +14,16 @@ class ATM implements Runnable {
 			if (getDepositeMoney() <= 0)
 				break;
 			withDraw(1000);
+			
+			// notify() : wait()에서 대기중인 쓰레드 대기 해제
+			this.notify();
+			
+			// wait() : 점유 해제 및 notify() 호출 대기
+			try {
+				this.wait();
+			}catch(InterruptedException e) {
+				e.printStackTrace();
+			}
 			}
 		}
 		
