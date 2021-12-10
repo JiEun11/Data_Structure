@@ -21,7 +21,7 @@ public class ThreadExam extends Thread{
 				e.printStackTrace();
 			}
 			
-			System.out.println(arr[i]);
+			System.out.println(currentThread() + " " + arr[i]);
 		}
 	}
 	
