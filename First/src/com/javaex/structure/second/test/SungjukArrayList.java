@@ -1,5 +1,6 @@
 package com.javaex.structure.second.test;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -105,57 +106,45 @@ class Student {
 				+ total + "\t" + "평균: " + avg;
 
 	}
-
-//학생 정보 출력
-
-//public void showInfo() {
-
-//System.out.println("학생: " + this.name);
-
-//System.out.println("국어점수: " + this.kor);
-
-//System.out.println("영어점수: " + this.eng);
-
-//System.out.println("수학점수: " + this.math);
-
-//}
-
 }
 
 public class SungjukArrayList {
 
-	private Student[] stu;
+	private ArrayList<Student> stu; // Student 객체 타입의 ArrayList인 stu 선언
 
-	public SungjukArrayList(int num) {
+	public SungjukArrayList(int num) {	// 사용자 생성자로 ArrayList 용량 정의
 
-		stu = new Student[num];
-
+		stu = new ArrayList<Student>(num);  //Student 객체 타입의 ArrayList Heap 메모리에 올림.
+		
 	}
-
+	
 	public void input() {
 
-		for (int i = 0; i < stu.length; i++) {
+		for (int i = 0; i < stu.size(); i++) {
 
 			Scanner sc = new Scanner(System.in);
 
-			stu[i] = new Student();
+//			Student student = new Student();
 
 			System.out.print("이름을 입력하세요: ");
-
-			stu[i].setName(sc.next()); // 만약 이렇게 안 쓰겠다 하면
-
+			String name = sc.next();
+//			student.setName(sc.next());
+			
 			System.out.print("국어 점수를 입력하세요: ");
-
-			stu[i].setKor(sc.nextInt()); // 국어 점수 입력
+			int kor = sc.nextInt();
+			
+//			student.setKor(sc.nextInt()); // 국어 점수 입력
 
 			System.out.print("영어 점수를 입력하세요: ");
-
-			stu[i].setEng(sc.nextInt()); // 영어 점수 입력
+			int eng = sc.nextInt();
+//			student.setEng(sc.nextInt()); // 영어 점수 입력
 
 			System.out.print("수학 점수를 입력하세요: ");
-
-			stu[i].setMath(sc.nextInt()); // 수학 점수 입력
-
+			int math = sc.nextInt();
+//			student.setMath(sc.nextInt()); // 수학 점수 입력
+			
+			stu.add(new Student(name, kor, eng, math));
+			stu.add(Student(student.getName(), student.getKor(), student.getEng(), student.getMath()));
 //Student stu = new Student(name, kor, eng, math); // 다 넣어주고 객체 생성
 
 		}
