@@ -84,7 +84,6 @@ class Student {
 	public void setMath(int math) {
 
 		this.math = math;
-
 	}
 
 	public int getTotal() {
@@ -92,19 +91,26 @@ class Student {
 		return total = kor + eng + math;
 
 	}
-
+	
+	public void setTotal(int total) {
+		this.total = total;
+	}
+	
 	public float getAvg() {
 
 		return avg = getTotal() / 3.f;
-
+	}
+	
+	public void setAvg(float avg) {
+		this.avg = avg;
 	}
 
-//	public String toString() {
-//
-//		return "이름: " + name + "\t" + "국어점수: " + kor + "\t" + "영어점수: " + eng + "\t" + "수학점수: " + math + "\t" + "합계: "
-//				+ total + "\t" + "평균: " + avg;
-//
-//	}
+	public String toString() {
+
+		return "이름: " + name + "\t" + "국어점수: " + kor + "\t" + "영어점수: " + eng + "\t" + "수학점수: " + math + "\t" + "합계: "
+				+ total + "\t" + "평균: " + avg;
+
+	}
 }
 
 public class SungjukArrayList {
@@ -139,7 +145,7 @@ public class SungjukArrayList {
 			System.out.print("수학 점수를 입력하세요: ");
 
 			student.setMath(sc.nextInt()); // 수학 점수 입력
-
+			
 			stu.add(student); // ArrayList는 객체를 갖고 다루는 애라 객체 넣어줘야함.
 
 //			만약 생성자로 add에 넣어줄꺼면 값 다 입력 받고 생성자를 넣던지
@@ -211,14 +217,14 @@ public class SungjukArrayList {
 //
 //		}
 		for (Student student : stu) {
-			System.out.println(student);
+			System.out.println(student.toString());
 		}
 
 	}
 
 // 원하는 학생 삭제
 	public void deleteInfo() {
-		System.out.print("삭제할 학생의 이름을 입력하세요.: ");
+		System.out.print("삭제할 학생의 이름을 입력하세요: ");
 		Scanner sc = new Scanner(System.in);
 		String name = sc.next();
 		for (Student student : stu) {
@@ -236,8 +242,10 @@ public class SungjukArrayList {
 		System.out.print("학생 수를 입력하세요: ");
 
 		Scanner sc = new Scanner(System.in);
-
-		SungjukArrayList sj = new SungjukArrayList(sc.nextInt());
+		
+		num = sc.nextInt();
+		
+		SungjukArrayList sj = new SungjukArrayList(num);
 
 		sj.input();
 
@@ -247,7 +255,7 @@ public class SungjukArrayList {
 
 			System.out.println("1.학생 성적 조회 | 2.평균 50점이상 학생 조회 | 3.전체 목록 조회 | 4.정보 삭제 | 5.프로그램 종료");
 
-			num = sc.nextInt();
+			int num = sc.nextInt();
 
 			if (num == 1) {
 
