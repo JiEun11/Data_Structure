@@ -111,6 +111,8 @@ class Student {
 				+ total + "\t" + "평균: " + avg;
 
 	}
+	
+
 }
 
 public class SungjukArrayList {
@@ -173,7 +175,7 @@ public class SungjukArrayList {
 
 		for (Student student : stu) {
 
-			if (student.getName().contains(nameSearch)) {
+			if (student.getName().equals(nameSearch)) {
 
 				System.out.println("국어 점수: " + student.getKor());
 
@@ -228,7 +230,8 @@ public class SungjukArrayList {
 		Scanner sc = new Scanner(System.in);
 		String name = sc.next();
 		for (Student student : stu) {
-			if (student.getName().contains(name)) {
+			if (student.getName().equals(name)) {
+				System.out.println(name+" 학생에 대한 정보가 삭제됩니다.");
 				stu.remove(student);
 			}
 		}
