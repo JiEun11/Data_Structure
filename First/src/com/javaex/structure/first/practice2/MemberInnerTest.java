@@ -1,19 +1,22 @@
 package com.javaex.structure.first.practice2;
 
+abstract class Abs{
+	abstract void disp();  //"disp" 라고 출력되게끔 
+}
+
 class Outter {
 	private int num1 = 10;
 	static int num2 = 3;
 
 	public void output() {
 		
-		class Inner {
-			public void disp() {
-//			System.out.println(num1);
+		new Abs() {
+			@Override
+			void disp() {
+				System.out.println(num1);
 				System.out.println(num2);
 			}
-		}
-		Inner in = new Inner();
-		in.disp();
+		}.disp();
 	}
 }
 
