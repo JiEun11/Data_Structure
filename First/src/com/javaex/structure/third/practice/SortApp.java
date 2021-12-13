@@ -38,6 +38,25 @@ class Sort{
 			}	
 		}
 	}
+	/*
+	 *  Binary search
+	 */
+	public int startBinarySearch(int target, int start, int end) {
+		int mid = (start+end)/2;
+		if(start > end) {
+			return -1;
+		}
+		
+		if(data[mid] < target) {
+			start = mid;
+			return startBinarySearch(target, start, end);
+		}else if(target < data[mid]) {
+			end = mid;
+			return startBinarySearch(target, start, end);
+		}else {
+			return mid;
+		}
+	}
 	
 	/*
 	 * swap method
@@ -68,7 +87,8 @@ public class SortApp {
 //		sort.disp();
 //		System.out.println();
 		sort.createBubbleSort();
-		
 		sort.disp();
+		System.out.println();
+		sort.startBinarySearch(40,0,100);   // 50이 있나 찾아줘라
 	}				
 }
