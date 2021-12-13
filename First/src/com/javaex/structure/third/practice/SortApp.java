@@ -39,23 +39,61 @@ class Sort{
 		}
 	}
 	/*
+	 * insertion sort
+	 */
+	public void createInsertionSort() {
+		for(int i=0; i<data.length; i++) {
+			for(int j=1; j<data.length; j++) {
+				if(data[j]<data[j-1]) {
+					swap(data,j,j-1);
+				}
+			}
+		}
+	}
+	
+	/*
+	 *  quick sort 
+	 */
+	public void createQuickSort(int[] arr, int start, int end) {
+		int pivot = partition(arr, start, end);
+		if(start<pivot-1) createQuickSort(arr, start, pivot-1);
+		if(end>pivot) createQuickSort(arr, pivot, end);
+		
+	}
+	
+	public int partition(int[] arr, int start, int end) {
+		int mid = (start+end)/2;
+		int pivot = data[mid];
+		
+		while(start<=end) {
+			while(data[start]<pivot) start++;
+			while(data[end]>pivot) end--;
+			if(start<=end) {
+				swap(data,start,end);
+				start++;
+				end--;
+			}
+		}
+		return start;
+	}
+	
+	/*
 	 *  Binary search
 	 */
-	public int startBinarySearch(int target, int start, int end) {
+	public int startBinarySearch(int[] data, int target, int start, int end) {
 		int mid = (start+end)/2;
-		if(start > end) {
-			return -1;
+
+		if(start<=end) {
+			if(data[mid] < target) {
+				return startBinarySearch(data, target, mid+1, end);
+			}else if(target < data[mid]) {
+				end = mid;
+				return startBinarySearch(data, target, start, mid-1);
+			}else {
+				return mid;
+			}
 		}
-		
-		if(data[mid] < target) {
-			start = mid;
-			return startBinarySearch(target, start, end);
-		}else if(target < data[mid]) {
-			end = mid;
-			return startBinarySearch(target, start, end);
-		}else {
-			return mid;
-		}
+		return -1;
 	}
 	
 	/*
@@ -84,11 +122,18 @@ public class SortApp {
 	
 		
 		Sort sort = new Sort(100);   // Call a constructor
-//		sort.disp();
-//		System.out.println();
-		sort.createBubbleSort();
 		sort.disp();
 		System.out.println();
-		sort.startBinarySearch(40,0,100);   // 50이 있나 찾아줘라
+//		sort.createBubbleSort();
+//		sort.createInsertionSort();
+		sort.createQuickSort(sort.getData(), 0, sort.getData().length-1);
+		sort.disp();
+		System.out.println();
+		int checkNum = sort.startBinarySearch(sort.getData(),40,0,100);
+		if(checkNum==-1) {
+			System.out.println("찾는 숫자가 없습니다.");
+		}else {
+			System.out.println(checkNum+1+"번째에 있습니다.");
+		}
 	}				
 }
