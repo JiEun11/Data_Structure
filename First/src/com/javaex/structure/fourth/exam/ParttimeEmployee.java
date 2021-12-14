@@ -19,7 +19,7 @@ public class ParttimeEmployee extends Employee{
         super.setEmployee_pay(pay);
         super.setEmployee_contract(contract);
 
-        this.exitdate = exitdate;
+        this.exitdate = exitdate;   // 퇴사일 
 
     }
     public String getExitdate() {

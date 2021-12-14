@@ -16,15 +16,15 @@ public abstract class Employee {
 
     
 
-    //TODO: 추가ㅏ아아아ㅏ
+    //TODO: 추가
     public void printAllInfo() {    
-        System.out.println(this.employee_name);
-        System.out.println(this.employee_id);
-        System.out.println(this.employee_department);
-        System.out.println(this.employee_pw);
-        System.out.println(this.employee_startdate);
-        System.out.println(this.employee_pay);
-        System.out.println(this.employee_contract);
+        System.out.println(this.employee_name);   // 이름
+        System.out.println(this.employee_id);     // 사번 
+        System.out.println(this.employee_department);  //부서 
+        System.out.println(this.employee_pw);     // 비번 
+        System.out.println(this.employee_startdate);   //입사일 
+        System.out.println(this.employee_pay);     // 급여 
+        System.out.println(this.employee_contract);   // 고용형태 1:정규직, 2:계약직
     }
     
     

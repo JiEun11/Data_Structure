@@ -18,7 +18,7 @@ public class FulltimeEmployee extends Employee{
     }
     public FulltimeEmployee(String name, int id, String depart, int pw, String date, double pay,
     Position pos, int contract){
-        super.setEmployee_name(name);
+        super.setEmployee_name(name);       
         super.setEmployee_id(id);
         super.setEmployee_department(depart);
         super.setEmployee_pw(pw);

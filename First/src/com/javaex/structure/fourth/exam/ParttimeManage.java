@@ -88,7 +88,6 @@ public class ParttimeManage  implements IPayrollManage{
     @Override
     public double getSalary(Position pos){
         
-
         return 1000;
 
     }
@@ -166,7 +165,6 @@ public class ParttimeManage  implements IPayrollManage{
             if (!exist)
                 System.out.println("검색하신 " + tmpName + " 직원에 대한 정보가 없습니다.");
 
-        sc.close();
     }
  
     // 검색
@@ -190,9 +188,7 @@ public class ParttimeManage  implements IPayrollManage{
             System.out.println("검색하신 " + tmpName + " 직원에 대한 정보가 없습니다.");
 
         exist = !exist;
- 
-    
-        sc.close();
+
     }
 
     // 출력
@@ -202,7 +198,9 @@ public class ParttimeManage  implements IPayrollManage{
         System.out.println("----------비정규직 직원 전체 출력----------");
         System.out.println("-----------------------------------");
 
-        System.out.println(felist.toString());
+        for(int i=0; i<felist.size(); i++) {
+			disp(felist.get(i));
+		}
     }
  
     //유저검색
@@ -222,7 +220,7 @@ public class ParttimeManage  implements IPayrollManage{
                 exist = true;
             }
             if (!exist)
-                System.out.println("직원 정보 없음");
+                System.out.println("직원 정보가 없습니다.");
 
             exist = !exist;
 
