@@ -1,4 +1,4 @@
-package com.javaex.mysql.javapractice;
+package com.javaex.mysql.javapractice.student;
 
 public class Human {
 	String name;

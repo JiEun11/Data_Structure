@@ -1,4 +1,4 @@
-package com.javaex.mysql.javapractice;
+package com.javaex.mysql.javapractice.gugudan;
 
 public class GuGuDanExpr extends Multiplication{
 	public GuGuDanExpr() {}
