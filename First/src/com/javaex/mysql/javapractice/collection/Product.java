@@ -39,10 +39,11 @@ public class Product {
 	/*
 	 * hasCode() 비교 -> equals 확인 -> 동등
 	 */
-	@Override
-	public int hashCode() {
-		return Integer.parseInt(getProductID());
-	}
+//	@Override
+//	public int hashCode() {
+//		System.out.println(getProductID());
+//		return Integer.parseInt(getProductID());
+//	}
 
 	@Override
 	public boolean equals(Object obj) {
