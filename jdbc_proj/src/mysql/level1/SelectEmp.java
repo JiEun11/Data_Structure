@@ -34,9 +34,9 @@ public class SelectEmp {
 			System.out.println(se1.getMessage());
 		}finally {
 			try {
-				rs.close();
-				stmt.close();
-				conn.close();
+				if(rs != null) rs.close();
+				if(stmt!= null) stmt.close();
+				if(conn!= null) conn.close();
 			}catch(SQLException se2) {
 				System.out.println(se2.getMessage());
 			}
