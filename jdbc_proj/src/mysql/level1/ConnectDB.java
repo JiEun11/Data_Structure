@@ -12,10 +12,10 @@ public class ConnectDB {
 			String passwd = "1234";
 			Connection conn = DriverManager.getConnection(url, user, passwd);
 			conn.close();
-			System.out.println("MYSQL ¿¬°á ¼º°ø");
+			System.out.println("MYSQL ì—°ê²° ì„±ê³µ");
 		} catch (Exception e) {
-			System.out.println("MYSQL ¿¬°á ½ÇÆÐ");
-			System.out.print("»çÀ¯ : " + e.getMessage());
+			System.out.println("MYSQL ì—°ê²° ì‹¤íŒ¨");
+			System.out.print("ì‚¬ìœ  : " + e.getMessage());
 		}
 	}
 }

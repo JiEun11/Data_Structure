@@ -14,7 +14,7 @@ public class SelectEmpLab {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (ClassNotFoundException cnfe) {
-			System.out.println("ÇØ´ç Å¬·¡½º¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("í•´ë‹¹ í´ë˜ìŠ¤ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			return;
 		}
 		
@@ -34,16 +34,16 @@ public class SelectEmpLab {
 			System.out.println("-------------------------------");
 			
 			if(check) {
-				rs = stmt.executeQuery("select ename, CONCAT(FORMAT(sal,0),'¿ø') from emp");
+				rs = stmt.executeQuery("select ename, CONCAT(FORMAT(sal,0),'ì›') from emp");
 				while(rs.next()) {
-					System.out.println(rs.getString("ename")+" Á÷¿øÀÇ ¿ù±ŞÀº "  
-							+ rs.getString(2)+"ÀÔ´Ï´Ù.");
+					System.out.println(rs.getString("ename")+" ì§ì›ì˜ ì›”ê¸‰ì€ "  
+							+ rs.getString(2)+"ì…ë‹ˆë‹¤.");
 				}
 			}else {
-				rs = stmt.executeQuery("SELECT ename, DATE_FORMAT(hiredate, \"%Y³â %m¿ù %dÀÏ\") from emp order by hiredate asc");
+				rs = stmt.executeQuery("SELECT ename, DATE_FORMAT(hiredate, \"%Yë…„ %mì›” %dì¼\") from emp order by hiredate asc");
 				while(rs.next()) {
-					System.out.println(rs.getString("ename") + " Á÷¿øÀº "
-							+ rs.getString(2) + "¿¡ ÀÔ»çÇÏ¿´½À´Ï´Ù.");
+					System.out.println(rs.getString("ename") + " ì§ì›ì€ "
+							+ rs.getString(2) + "ì— ì…ì‚¬í•˜ì˜€ìŠµë‹ˆë‹¤.");
 				}
 			}
 		} catch (SQLException se1) {
