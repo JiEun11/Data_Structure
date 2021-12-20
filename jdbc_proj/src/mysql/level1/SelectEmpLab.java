@@ -40,7 +40,7 @@ public class SelectEmpLab {
 							+ rs.getString(2)+"입니다.");
 				}
 			}else {
-				rs = stmt.executeQuery("SELECT ename, DATE_FORMAT(hiredate, '%Y년 %m월 %d일') from emp order by hiredate asc");
+				rs = stmt.executeQuery("SELECT ename, DATE_FORMAT(hiredate, \"%Y년 %m월 %d일\") from emp order by hiredate asc");
 				while(rs.next()) {
 					System.out.println(rs.getString("ename") + " 직원은 "
 							+ rs.getString(2) + "에 입사하였습니다.");
