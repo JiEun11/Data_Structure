@@ -25,8 +25,11 @@ public class SelectEmp {
 		
 		try {	
 			conn = DriverManager.getConnection(url, user, passwd);
+			System.out.println(conn.getClass().getName());
 			stmt = conn.createStatement();
+			System.out.println(stmt.getClass().getName());
 			rs = stmt.executeQuery("select ename, sal, hiredate from emp");
+			System.out.println(rs.getClass().getName());
 			while(rs.next()){
 				System.out.println(rs.getString("ename")+","+rs.getDate("hiredate")+","+rs.getInt("sal"));
 			}
