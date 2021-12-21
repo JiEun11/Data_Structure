@@ -32,8 +32,8 @@ public class InsertData1 {
 			System.out.println(se1.getMessage());
 		} finally {
 			try {
-				stmt.close();
-				conn.close();
+				if(stmt != null) stmt.close();
+				if(conn != null) conn.close();
 			} catch (SQLException se2) {
 				System.out.println(se2.getMessage());
 			}

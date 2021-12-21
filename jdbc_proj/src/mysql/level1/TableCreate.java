@@ -21,15 +21,15 @@ public class TableCreate {
 			String passwd = "1234";
 			conn = DriverManager.getConnection(url, user, passwd);	
 			System.out.println("데이터베이스에 접속했습니다.");
-			stmt = conn.createStatement();		
+			stmt = conn.createStatement();		// statement 객체를 factory method를 통해 내부적으로 받아온다.
 			stmt.executeUpdate("create table student (name varchar(10), score int)");
 			System.out.println("student 테이블 생성");						
 		} catch (SQLException se1) {
 			System.out.println(se1.getMessage());
 		} finally {
 			try {
-				stmt.close();
-				conn.close();
+				if(stmt != null) stmt.close();
+				if(conn != null) conn.close();
 			} catch (SQLException se2) {
 				System.out.println(se2.getMessage());
 			}
