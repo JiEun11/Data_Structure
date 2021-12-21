@@ -25,6 +25,7 @@ public class SelectData2 {
 		    String name = scan.nextLine();
 		    pstmt.setString(1, name);
 			ResultSet rs = pstmt.executeQuery();
+		
 			if(rs.next()) 
 				System.out.println(name + "학생의 점수 : " + rs.getInt("score"));
 			 else 			

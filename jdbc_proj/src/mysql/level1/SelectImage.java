@@ -38,6 +38,7 @@ public class SelectImage {
 					fos.write(b, 0, n);
 				}
 				fos.close();
+				rs.close();
 			} else {
 				System.out.print(name + "이라는 파일명으로 저장된 이미지가 존재하지 않습니다. ");
 			}
