@@ -17,7 +17,8 @@ public class SelectData1 {
 		String url = "jdbc:mysql://localhost:3306/jdbcdb?characterEncoding=UTF-8&serverTimezone=UTC";
 		String user = "root";
 		String passwd = "1234";
-		try (Connection conn = DriverManager.getConnection(url, user, passwd);Statement stmt = conn.createStatement()){
+		try (Connection conn = DriverManager.getConnection(url, user, passwd);
+				Statement stmt = conn.createStatement()){
 			ResultSet rs = stmt.executeQuery("select * from student");
 			while(rs.next()) {
 				System.out.println(rs.getString("name")+"학생은 "+rs.getInt("score")+"점 입니다.");
