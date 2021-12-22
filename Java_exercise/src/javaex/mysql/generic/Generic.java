@@ -3,13 +3,6 @@ package javaex.mysql.generic;
 import java.util.Arrays;
 import java.util.List;
 
-class StudentInfo{
-	public int grade;
-	StudentInfo(int grade){
-		this.grade = grade;
-	}
-}
-
 class EmployeeInfo{
 	public int rank;
 	EmployeeInfo(int rank){
@@ -17,23 +10,22 @@ class EmployeeInfo{
 	}
 }
 
-class Person<T>{
+class Person<T, S>{
 	public T info;
-	Person(T info){
+	public S id;
+	Person(T info, S id){
 		this.info = info;
+		this.id = id;
 	}
 }
 
 public class Generic {
 
 	public static void main(String[] args) {
-		Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(1));
-		EmployeeInfo ei1 = p1.info;
-		System.out.println(ei1.rank); //성공
+		Integer id = new Integer(1);   // 숫자 1을 나타내는 객체 id를 생성함
+		Person<EmployeeInfo, Integer> p1 = new Person<EmployeeInfo, Integer>(new EmployeeInfo(1),id);
+		System.out.println(p1.id.intValue());
 		
-		Person<String> p2 = new Person<String>("부장");
-		String ei2 = p2.info;
-		System.out.println(ei2.rank); //실패
 
 //		List<Integer> list = Arrays.asList(1,2,3,4);
 //		
