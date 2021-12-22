@@ -7,13 +7,6 @@ class StudentInfo{
 	}
 }
 
-class StudentPerson{
-	public StudentInfo info;
-	StudentPerson(StudentInfo info){
-		this.info = info;
-	}
-}
-
 class EmployeeInfo{
 	public int rank;
 	EmployeeInfo(int rank){
@@ -21,9 +14,9 @@ class EmployeeInfo{
 	}
 }
 
-class EmployeePerson{
-	public EmployeeInfo info;
-	EmployeePerson(EmployeeInfo info){
+class Person{
+	public Object info;
+	Person(Object info){
 		this.info = info;
 	}
 }
@@ -32,13 +25,9 @@ public class Generic {
 
 	public static void main(String[] args) {
 		
-		StudentInfo si = new StudentInfo(2);
-		StudentPerson sp = new StudentPerson(si);
-		System.out.println(sp.info.grade);
+		Person p1 = new Person("부장");
+		EmployeeInfo ei = (EmployeeInfo)p1.info;
 		
-		EmployeeInfo ei = new EmployeeInfo(1);
-		EmployeePerson ep = new EmployeePerson(ei);
-		System.out.println(ep.info.rank);
 	}
 
 }
