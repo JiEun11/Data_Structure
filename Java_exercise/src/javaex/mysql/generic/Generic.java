@@ -17,14 +17,22 @@ class Person<T, S>{
 		this.info = info;
 		this.id = id;
 	}
+	public <U> void printInfo(U info) {
+		System.out.println(info);
+	}
 }
+
 
 public class Generic {
 
 	public static void main(String[] args) {
-		Integer id = new Integer(1);   // 숫자 1을 나타내는 객체 id를 생성함
-		Person<EmployeeInfo, Integer> p1 = new Person<EmployeeInfo, Integer>(new EmployeeInfo(1),id);
-		System.out.println(p1.id.intValue());
+		EmployeeInfo e = new EmployeeInfo(1);
+		Integer i = new Integer(10);
+		Person p1 = new Person(e,i);
+		
+		p1.<EmployeeInfo>printInfo(e);
+		
+//		p1.printInfo(e); 로 생략 가능 
 		
 
 //		List<Integer> list = Arrays.asList(1,2,3,4);
