@@ -3,11 +3,11 @@ package javaex.mysql.generic;
 import java.util.Arrays;
 import java.util.List;
 
-abstract class Info{
-	public abstract int getLevel();
+interface Info{
+	int getLevel();
 }
 
-class EmployeeInfo extends Info{
+class EmployeeInfo implements Info{
 	public int rank;
 	EmployeeInfo(int rank){
 		this.rank = rank;
