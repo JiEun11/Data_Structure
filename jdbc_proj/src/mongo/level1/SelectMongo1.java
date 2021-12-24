@@ -1,5 +1,8 @@
 package mongo.level1;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.bson.Document;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
@@ -10,6 +13,8 @@ public class SelectMongo1 {
 
 	public static void main(String[] args) {
 		
+		Logger mongoLogger = Logger.getLogger("org.mongodb.driver");
+		mongoLogger.setLevel(Level.SEVERE);
 		try {
 			MongoClient mongoClient = new MongoClient("localhost", 27017);
 			 MongoDatabase db = mongoClient.getDatabase("edudb");
