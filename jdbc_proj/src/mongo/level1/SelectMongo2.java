@@ -16,18 +16,22 @@ public class SelectMongo2 {
             MongoClient mongoClient = new MongoClient("localhost", 27017);
             MongoDatabase db = mongoClient.getDatabase("edudb");
             MongoCollection<Document> collection = db.getCollection("book");
+            
+            
             MongoCursor<Document>  cursor = collection.find().iterator();
             while(cursor.hasNext()) {
             	System.out.println(cursor.next());           
             }  		          
             System.out.println("--------------------------------");
+            
+            //한번 밖에 못 읽어서 다시 불러오기
             cursor = collection.find().iterator();
             while(cursor.hasNext()) {
             	Document doc = cursor.next();
-            	System.out.println(doc.get("name") + " : " + ((java.lang.Double)doc.get("price")).intValue());
-            	System.out.println(doc.get("price").getClass().getName());
-         
-            }      
+            	System.out.println(doc.get("name") + " : " + ((Double)doc.get("price")).intValue());
+            	System.out.println(doc.get("price").getClass().getName());	
+            }     
+            
             System.out.println("--------------------------------");
             Consumer<Document> printConsumer1 = new Consumer<Document>() {
                 @Override
