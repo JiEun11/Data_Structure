@@ -21,7 +21,7 @@ public class InsertMongo1 {
             MongoCollection<Document> collection = db.getCollection("book");
             
            Document doc = new Document("name", "spring")
-                    .append("price", "30000");
+                    .append("price", 30000);
             collection.insertOne(doc);
             
             MongoCursor<Document>  cursor  = collection.find().iterator();
