@@ -1,7 +1,7 @@
 package javaex.codingtest;
 
 public class SortArray {
-
+	// 낼 수정하기 
 	public int[] solution(int[] array, int[][] commands) {
 
 		int[] temp = {};
