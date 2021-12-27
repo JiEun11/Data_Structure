@@ -23,9 +23,9 @@ public class ProductTest {
 	public void addProductObj(Product p) {
 		if (checkProductID(p)) {
 			hs.add(p);
-			System.out.println("¼º°øÀûÀ¸·Î ÀúÀåµÇ¾ú½À´Ï´Ù.");
+			System.out.println("ì„±ê³µì ìœ¼ë¡œ ì €ì¥ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		} else {
-			System.out.println("µ¿ÀÏÇÑ IDÀÇ Á¦Ç°ÀÌ ÀÌ¹Ì ÀúÀåµÇ¾î ÀÖ½À´Ï´Ù.");
+			System.out.println("ë™ì¼í•œ IDì˜ ì œí’ˆì´ ì´ë¯¸ ì €ì¥ë˜ì–´ ìˆìŠµë‹ˆë‹¤.");
 		}
 	}
 
@@ -50,7 +50,7 @@ public class ProductTest {
 	 * print the result
 	 */
 	public void displayProduct(Product p) {
-		System.out.println("Á¦Ç°ID       Á¦Ç°¸í        °¡°İ      ");
+		System.out.println("ì œí’ˆID       ì œí’ˆëª…        ê°€ê²©      ");
 		System.out.println("--------------------------------");
 		System.out.println(p.toString());
 	}

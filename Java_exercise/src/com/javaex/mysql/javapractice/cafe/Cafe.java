@@ -7,36 +7,36 @@ import java.util.Scanner;
 public class Cafe {
 
 	private ArrayList<Coffee> al = new ArrayList<>();
-	// coffee class Å¸ÀÔÀ¸·Î arraylist °´Ã¼ »ı¼º
+	// coffee class íƒ€ì…ìœ¼ë¡œ arraylist ê°ì²´ ìƒì„±
 	int sum = 0;
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Cafe cafe = new Cafe();
 		/*
-		 * 1. Á¾·ù¼±ÅÃ
+		 * 1. ì¢…ë¥˜ì„ íƒ
 		 */
 		int total = 0;
 		boolean stop = true;
 		while (stop) {
-			System.out.println("-------Ä«Æä ÁÖ¹® ½Ã½ºÅÛ -------");
-			System.out.println("Á¾·ù¸¦ ¼±ÅÃÇÏ¼¼¿ä.");
-			System.out.println("1.¾Æ¸Ş¸®Ä«³ë 2.Ä«Æä¶ó¶¼  3.Äİµåºê·ç  4.Ä«Æä¸ğÄ«  5.ÁÖ¹®Á¾·á");
+			System.out.println("-------ì¹´í˜ ì£¼ë¬¸ ì‹œìŠ¤í…œ -------");
+			System.out.println("ì¢…ë¥˜ë¥¼ ì„ íƒí•˜ì„¸ìš”.");
+			System.out.println("1.ì•„ë©”ë¦¬ì¹´ë…¸ 2.ì¹´í˜ë¼ë–¼  3.ì½œë“œë¸Œë£¨  4.ì¹´í˜ëª¨ì¹´  5.ì£¼ë¬¸ì¢…ë£Œ");
 			int chooseNum = sc.nextInt();
 
 			if (chooseNum == 1) {
-				// ¾Æ¸Ş¸®Ä«³ë °´Ã¼ »ı¼º
+				// ì•„ë©”ë¦¬ì¹´ë…¸ ê°ì²´ ìƒì„±
 				cafe.createAmericano();
 
 			} else if (chooseNum == 2) {
-				// Ä«Æä¶ó¶¼ °´Ã¼ »ı¼º
+				// ì¹´í˜ë¼ë–¼ ê°ì²´ ìƒì„±
 				cafe.createCafeLatte();
 			} else if (chooseNum == 3) {
-				// Äİµåºê·ç °´Ã¼ »ı¼º
+				// ì½œë“œë¸Œë£¨ ê°ì²´ ìƒì„±
 				cafe.createColdbrew();
 
 			} else if (chooseNum == 4) {
-				// Ä«Æä¸ğÄ« °´Ã¼ »ı¼º
+				// ì¹´í˜ëª¨ì¹´ ê°ì²´ ìƒì„±
 				cafe.createCafeMocha();
 			} else if (chooseNum == 5) {
 				total = cafe.calculatePrice();
@@ -52,7 +52,7 @@ public class Cafe {
 	}
 
 	/*
-	 * ¾Æ¸Ş¸®Ä«³ë °´Ã¼ »ı¼º ¸Ş¼Òµå
+	 * ì•„ë©”ë¦¬ì¹´ë…¸ ê°ì²´ ìƒì„± ë©”ì†Œë“œ
 	 */
 	public void createAmericano() {
 		Scanner sc = new Scanner(System.in);
@@ -71,7 +71,7 @@ public class Cafe {
 	}
 
 	/*
-	 * Ä«Æä¶ó¶¼ °´Ã¼ »ı¼º ¸Ş¼Òµå
+	 * ì¹´í˜ë¼ë–¼ ê°ì²´ ìƒì„± ë©”ì†Œë“œ
 	 */
 	public void createCafeLatte() {
 		Scanner sc = new Scanner(System.in);
@@ -89,7 +89,7 @@ public class Cafe {
 	}
 
 	/*
-	 * Äİµåºê·ç °´Ã¼ »ı¼º ¸Ş¼Òµå
+	 * ì½œë“œë¸Œë£¨ ê°ì²´ ìƒì„± ë©”ì†Œë“œ
 	 */
 	public void createColdbrew() {
 		Scanner sc = new Scanner(System.in);
@@ -104,7 +104,7 @@ public class Cafe {
 	}
 
 	/*
-	 * Ä«Æä¸ğÄ« °´Ã¼ »ı¼º ¸Ş¼Òµå
+	 * ì¹´í˜ëª¨ì¹´ ê°ì²´ ìƒì„± ë©”ì†Œë“œ
 	 */
 	public void createCafeMocha() {
 		Scanner sc = new Scanner(System.in);
@@ -132,7 +132,7 @@ public class Cafe {
 	}
 	
 	/*
-	 * ÃÖÁ¾ °è»ê ¸Ş¼Òµå
+	 * ìµœì¢… ê³„ì‚° ë©”ì†Œë“œ
 	 */
 	public int calculatePrice() {
 //		Iterator<Coffee> cp = al.iterator()

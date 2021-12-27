@@ -37,7 +37,7 @@ public class Product {
 	}
 
 	/*
-	 * hasCode() ºñ±³ -> equals È®ÀÎ -> µ¿µî
+	 * hasCode() ë¹„êµ -> equals í™•ì¸ -> ë™ë“±
 	 */
 //	@Override
 //	public int hashCode() {

@@ -16,6 +16,6 @@ public class Human {
 	}
 	
 	public String printInformation() {
-		return "ÀÌ¸§: "+name+" ³ªÀÌ: "+age+" Å°: "+height+" ¸ö¹«°Ô: "+weight;
+		return "ì´ë¦„: "+name+" ë‚˜ì´: "+age+" í‚¤: "+height+" ëª¸ë¬´ê²Œ: "+weight;
 	}
 }

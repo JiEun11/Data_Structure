@@ -10,8 +10,8 @@ public class Exercise1 {
 		int sum = num1 + num2 + num3 ;
 		int avg = sum/3;
 		
-		System.out.println("ÇÕ°è: " + sum);
-		System.out.println("Æò±Õ: " + avg);
+		System.out.println("í•©ê³„: " + sum);
+		System.out.println("í‰ê· : " + avg);
 	}
 
 }

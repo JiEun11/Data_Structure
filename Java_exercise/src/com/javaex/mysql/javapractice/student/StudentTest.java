@@ -5,9 +5,9 @@ public class StudentTest {
 	public static void main(String[] args) {
 		
 		Student arrays[] = new Student[3];
-		Student stu1 = new Student("È«±æµ¿",20,171,81,"201101","¿µ¹®");
-		Student stu2 = new Student("°í±æµ¿",21,183,72,"201102","°ÇÃà");
-		Student stu3 = new Student("¹Ú±æµ¿",22,175,65,"201103","ÄÄ°ø");
+		Student stu1 = new Student("í™ê¸¸ë™",20,171,81,"201101","ì˜ë¬¸");
+		Student stu2 = new Student("ê³ ê¸¸ë™",21,183,72,"201102","ê±´ì¶•");
+		Student stu3 = new Student("ë°•ê¸¸ë™",22,175,65,"201103","ì»´ê³µ");
 	
 		arrays[0] = stu1;
 		arrays[1] = stu2;

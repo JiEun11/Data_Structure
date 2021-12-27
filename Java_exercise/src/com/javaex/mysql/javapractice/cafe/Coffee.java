@@ -2,11 +2,11 @@ package com.javaex.mysql.javapractice.cafe;
 
 public class Coffee {
 	
-	protected int price;     // À½·á °¡°İ
-	protected String name;  // Ä¿ÇÇ Á¾·ù
+	protected int price;     // ìŒë£Œ ê°€ê²©
+	protected String name;  // ì»¤í”¼ ì¢…ë¥˜
 	protected int size;     //  1. regular   2.large
 	protected int tem;      //  1. hot       2.ice
-	protected int count;   // °³¼ö
+	protected int count;   // ê°œìˆ˜
 	
 	public int getPrice() {
 		return price;
