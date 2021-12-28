@@ -29,6 +29,7 @@ public class VisitorGetServlet extends HttpServlet {
 		out.print("내용: " + op);
 		out.print("<p>");
 		out.print("<a href='/edu/htmlexam/visitorForm.html'>" + "입력화면으로... </a>");
+		out.close();
 	}
 
 }
