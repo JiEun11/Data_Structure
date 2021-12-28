@@ -20,14 +20,14 @@ public class GreetingServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		LocalDate now = LocalDate.now(); 
 		PrintWriter out = response.getWriter();
-		if(request.getParameter("guestname") != null) {
-			out.print("<h2>" + request.getParameter("guestname") + "님 반가워요.." 
-		+ "오늘은 " + now.getDayOfWeek().getDisplayName(TextStyle.SHORT, Locale.KOREAN) +"요일입니다.</h2>");
+		String guestname = request.getParameter("guestname");
+		String dayOfWeek = now.getDayOfWeek().getDisplayName(TextStyle.SHORT, Locale.KOREAN);
+		
+		if(guestname == null || guestname.isEmpty() ) {
+			guestname = "손";
 		}
-		else {
-			out.print("<h2>손님 반가워요.. "+ "오늘은 " 
-		+ now.getDayOfWeek().getDisplayName(TextStyle.SHORT, Locale.KOREAN) +"요일입니다.</h2>");
-		}
+		
+		out.print("<h2>"+guestname+"님 반가워요.. "+ "오늘은 "+ dayOfWeek +"요일입니다!!</h2>");
 		out.close();
 	}
 	
