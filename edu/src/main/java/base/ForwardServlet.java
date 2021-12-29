@@ -16,7 +16,7 @@ public class ForwardServlet extends HttpServlet {
 			throws ServletException, IOException {
 		System.out.println("FowardServlet 수행 시작");		
 		RequestDispatcher rd = request.getRequestDispatcher("/htmlexam/first.html");// 컨텍스트패스 이후 부분을 줘야	
-		//RequestDispatcher rd = request.getRequestDispatcher("http://www.naver.com/");// 컨텍스트패스 이후 부분을 줘야	
+//		RequestDispatcher rd = request.getRequestDispatcher("http://www.naver.com/");// 컨텍스트패스 이후 부분을 줘야	
 		rd.forward(request, response);	
 		System.out.println("FowardServlet 수행 종료");		
 	}
