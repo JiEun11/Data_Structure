@@ -13,26 +13,28 @@
 	<h2>자연휴양림 예약 서비스</h2>
 	<hr>
 	<form class="rformtags" method = "post" action="/edu/reservation">
-	예약자명 : <input type="text" name="rname" required>
-	<br>
-	예약암호 : <input type="password" name="rpasswd" required>
-	<br>
-	휴양림 선택 :  
-	산음<input type="radio" name="rplace" value="산음" >
-	중미산<input type="radio" name="rplace" value="중미산">
-	유명산<input type="radio" name="rplace" value="유명산">
-	아세안<input type="radio" name="rplace" value="아세안">
-	<br>
-	추가 요청 :  
-	바베큐<input type="checkbox" name="rextra" value="바베큐">
-	수영장<input type="checkbox" name="rextra" value="수영장">
-	낚시<input type="checkbox" name="rextra" value="낚시">
-	조식<input type="checkbox" name="rextra" value="조식">
-	<br>
-	예약날짜 : <input type="date" name="rdate" min="2021-12-28">
-	<hr>
-	<input class="submit_form" type="submit" value="보내기">
-	<input class="submit_form" type="reset" value="다시 작성하기">
+		예약자명 : <input type="text" name="rname" required>
+		<br>
+		예약암호 : <input type="password" name="rpasswd" required>
+		<br>
+		휴양림 선택 :  
+		산음<input type="radio" name="rplace" value="산음" >
+		중미산<input type="radio" name="rplace" value="중미산">
+		유명산<input type="radio" name="rplace" value="유명산">
+		아세안<input type="radio" name="rplace" value="아세안">
+		<br>
+		추가 요청 :  
+		바베큐<input type="checkbox" name="rextra" value="바베큐">
+		수영장<input type="checkbox" name="rextra" value="수영장">
+		낚시<input type="checkbox" name="rextra" value="낚시">
+		조식<input type="checkbox" name="rextra" value="조식">
+		<br>
+		예약날짜 : <input type="date" name="rdate" min="2021-12-28">
+		<hr>
+		<div class="submit_button">
+			<input type="submit" value="보내기">
+			<input type="reset" value="다시 작성하기">
+		</div>
 	</form>
 
 </div>

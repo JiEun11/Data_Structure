@@ -22,9 +22,10 @@ hr{
 }
 
 .rformtags{
-
+	
 }
 
-.submit_form{
-	
+.submit_button{
+	display:flex;
+	justify-content: center;
 }
