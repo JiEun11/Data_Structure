@@ -25,6 +25,7 @@ public class baseBasketServlet extends HttpServlet {
 		out.print("<img src=/edu/images/" + pid + ".jpg>");
 		out.print("<hr>");
 		out.print("<a href='/edu/htmlexam/productlog.html'>상품 선택 화면</a>");
+		out.close();
 		
 	}
 
