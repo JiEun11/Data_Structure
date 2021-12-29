@@ -22,7 +22,7 @@ public class QueryServlet extends HttpServlet {
 		out.print("<li>p1 : "+ p1 +"</li>");
 		out.print("<li>p2 : "+ p2 +"</li>");
 		for(int i=0; i < p3.length; i++)
-			out.print("<li>p3["+i+"] : "+ p3[i] +"</li>");
+		out.print("<li>p3["+i+"] : "+ p3[i] +"</li>");
 		out.print("</ul>");
 		out.print("<a href='/edu/htmlexam/queryservlettest.html'>입력화면으로</a>");
 		out.close();		
