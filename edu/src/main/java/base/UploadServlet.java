@@ -29,14 +29,23 @@ public class UploadServlet extends HttpServlet {
 		Collection<Part> parts = request.getParts();
 		for (Part part : parts) {
 			String fileName = part.getSubmittedFileName();
-			if (fileName != null) {
-				part.write(System.currentTimeMillis()+"_"+fileName); 
+//			if (fileName != null) {
+//				part.write(System.currentTimeMillis()+"_"+fileName); 
+//				out.print("업로드한 파일 이름: " + fileName + "<br>");
+//				out.print("크기: " + part.getSize() + "<br>");
+//			} else {
+//				String partName = part.getName();
+//				String fieldValue = request.getParameter(partName);
+//				out.print(partName + " : " + fieldValue + "<br>");
+//			}
+			if(fileName != null && fileName.equals("")) {
+				part.write(System.currentTimeMillis()+"_"+fileName);
 				out.print("업로드한 파일 이름: " + fileName + "<br>");
 				out.print("크기: " + part.getSize() + "<br>");
-			} else {
+			}else if(fileName == null) {
 				String partName = part.getName();
 				String fieldValue = request.getParameter(partName);
-				out.print(partName + " : " + fieldValue + "<br>");
+				out.print(partName + ":" + fieldValue + "<br>");
 			}
 		}
 		out.close();
