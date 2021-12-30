@@ -30,7 +30,6 @@ public class LottoServlet2 extends HttpServlet {
 
 		String lnum = request.getParameter("lnum");
 		System.out.printf("전달된 값 : %s, 추출된 값 : %d %n", lnum, ranNum);
-		System.out.println(session_v[0]);
 		RequestDispatcher rd;
 		if (ranNum == Integer.parseInt(lnum)) {
 			if (session_v[0] <= 3) {
