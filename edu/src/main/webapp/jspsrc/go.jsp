@@ -28,14 +28,14 @@
 		}else if(study.equals("jsp")){
 		
 %>
-		<jsp:forward page='/jspsrc/exam6.jsp'>
+		<jsp:forward page='exam6.jsp'>
 		 <jsp:param name="dan" value="7" />
 		</jsp:forward>
 <%			
 		}else if(study.equals("html")) {
 %>
-		<jsp:forward page='first.html'>
-		</jsp:forward>
+		<jsp:forward page='/htmlexam/first.html' />
+	
 <%	
 		}	
 	}
