@@ -9,7 +9,7 @@ public class Cafe {
 	private ArrayList<Coffee> al = new ArrayList<>();
 	// coffee class 타입으로 arraylist 객체 생성
 	int sum = 0;
-
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Cafe cafe = new Cafe();
