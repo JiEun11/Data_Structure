@@ -23,6 +23,7 @@ public class LottoServlet2 extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		HttpSession session = request.getSession();
+		
 		if (session.getAttribute("cnt") == null) {
 			session.setAttribute("cnt", new int[1]);
 		}
@@ -33,18 +34,22 @@ public class LottoServlet2 extends HttpServlet {
 		RequestDispatcher rd;
 		if (ranNum == Integer.parseInt(lnum)) {
 			if (session_v[0] <= 3) {
-				rd = request.getRequestDispatcher("/htmlexam/success.html");
+//				rd = request.getRequestDispatcher("/htmlexam/success.html");
+				rd = request.getRequestDispatcher("/jspsrc/success.jsp");
 			} else {
-				rd = request.getRequestDispatcher("/htmlexam/impossible.html");
+//				rd = request.getRequestDispatcher("/htmlexam/impossible.html");
+				rd = request.getRequestDispatcher("/jspsrc/impossible.jsp");
 			}
 
 		} else {
 			if (session_v[0] <= 3) {
-				rd = request.getRequestDispatcher("/htmlexam/fail.html");
+//				rd = request.getRequestDispatcher("/htmlexam/fail.html");
+				rd = request.getRequestDispatcher("/jspsrc/fail.jsp");
 				System.out.println(session_v[0]);
 				session_v[0] += 1;
 			} else {
-				rd = request.getRequestDispatcher("/htmlexam/impossible.html");
+//				rd = request.getRequestDispatcher("/htmlexam/impossible.html");
+				rd = request.getRequestDispatcher("/jspsrc/impossible.jsp");
 			}
 		}
 		rd.forward(request, response);
