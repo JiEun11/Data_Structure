@@ -19,7 +19,7 @@ input {
 		session.removeAttribute("member_passwd");
 	%>
 	<script>
-		alert("성공적으로 로그아웃했습니다 !!");
+		window.alert("성공적으로 로그아웃했습니다 !!");
 	</script>
 	<%
 	} else {
