@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>http://localhost:8080/edu/jspsrc/first.jsp</title>
+<title>Insert title here</title>
 </head>
 <body>
 <h1>JSP 맛보기 예제</h1>
 <hr>
-<%=new java.util.Date() %>
+<%= new java.util.Date() %>
 </body>
 </html>
