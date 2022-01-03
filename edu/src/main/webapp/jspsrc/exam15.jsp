@@ -20,7 +20,7 @@ input {
 			if (name.equals("duke") && passwd.equals("java")) {
 		session.setAttribute("member_id", name);
 		session.setAttribute("member_passwd", passwd);
-		session.setMaxInactiveInterval(60);
+		session.setMaxInactiveInterval(60);  // 1분후 자동으로 로그아웃
 	%>
 	<script>
 		alert("성공적으로 로그인했습니다!!");
@@ -40,6 +40,7 @@ input {
 	}
 	}
 	} else if (request.getMethod().equals("GET")) {
+	//session.setAttribute("member_id", request.getParameter("member_id"));
 	String name = (String) session.getAttribute("member_id");
 	if (name != null) {
 	%>
