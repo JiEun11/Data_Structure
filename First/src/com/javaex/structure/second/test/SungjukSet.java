@@ -3,58 +3,58 @@ package com.javaex.structure.second.test;
 import java.util.HashSet;
 import java.util.Scanner;
 
-// Student Class´Â ArrayList Å¬·¡½º¿¡ ÀÖÀ½.
+// Student ClassëŠ” ArrayList í´ë˜ìŠ¤ì— ìˆìŒ.
 
 public class SungjukSet {
 
-	static int num; // ÇĞ»ı ¸í¼ö ¹ŞÀ» »ç¿ëÀÚ °ª
-	private HashSet<Student> stu; // Student °´Ã¼ Å¸ÀÔÀÇ HashSetÀÎ stu ¼±¾ğ
+	static int num; // í•™ìƒ ëª…ìˆ˜ ë°›ì„ ì‚¬ìš©ì ê°’
+	private HashSet<Student> stu; // Student ê°ì²´ íƒ€ì…ì˜ HashSetì¸ stu ì„ ì–¸
 
-	public SungjukSet(int numStudent) { // »ç¿ëÀÚ »ı¼ºÀÚ·Î HashSet ¿ë·® Á¤ÀÇ
+	public SungjukSet(int numStudent) { // ì‚¬ìš©ì ìƒì„±ìë¡œ HashSet ìš©ëŸ‰ ì •ì˜
 
-		stu = new HashSet<Student>(numStudent); // Student °´Ã¼ Å¸ÀÔÀÇ HashSetÀ» Heap ¸Ş¸ğ¸®¿¡ ¿Ã¸².
+		stu = new HashSet<Student>(numStudent); // Student ê°ì²´ íƒ€ì…ì˜ HashSetì„ Heap ë©”ëª¨ë¦¬ì— ì˜¬ë¦¼.
 	}
 
 	public void input() {
-		Scanner sc = new Scanner(System.in); // for¹®¾È¿¡ X
+		Scanner sc = new Scanner(System.in); // forë¬¸ì•ˆì— X
 
 		for (int i = 0; i < num; i++) {
 
 			Student student = new Student();
 
-			System.out.print("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+			System.out.print("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”: ");
 			student.setName(sc.next());
 
-			System.out.print("±¹¾î Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+			System.out.print("êµ­ì–´ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
 
-			student.setKor(sc.nextInt()); // ±¹¾î Á¡¼ö ÀÔ·Â
+			student.setKor(sc.nextInt()); // êµ­ì–´ ì ìˆ˜ ì…ë ¥
 
-			System.out.print("¿µ¾î Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+			System.out.print("ì˜ì–´ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
 
-			student.setEng(sc.nextInt()); // ¿µ¾î Á¡¼ö ÀÔ·Â
+			student.setEng(sc.nextInt()); // ì˜ì–´ ì ìˆ˜ ì…ë ¥
 
-			System.out.print("¼öÇĞ Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+			System.out.print("ìˆ˜í•™ ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
 
-			student.setMath(sc.nextInt()); // ¼öÇĞ Á¡¼ö ÀÔ·Â
+			student.setMath(sc.nextInt()); // ìˆ˜í•™ ì ìˆ˜ ì…ë ¥
 			
-			stu.add(student); // ArrayList´Â °´Ã¼¸¦ °®°í ´Ù·ç´Â ¾Ö¶ó °´Ã¼ ³Ö¾îÁà¾ßÇÔ.
+			stu.add(student); // ArrayListëŠ” ê°ì²´ë¥¼ ê°–ê³  ë‹¤ë£¨ëŠ” ì• ë¼ ê°ì²´ ë„£ì–´ì¤˜ì•¼í•¨.
 
-//			¸¸¾à »ı¼ºÀÚ·Î add¿¡ ³Ö¾îÁÙ²¨¸é °ª ´Ù ÀÔ·Â ¹Ş°í »ı¼ºÀÚ¸¦ ³Ö´øÁö
+//			ë§Œì•½ ìƒì„±ìë¡œ addì— ë„£ì–´ì¤„êº¼ë©´ ê°’ ë‹¤ ì…ë ¥ ë°›ê³  ìƒì„±ìë¥¼ ë„£ë˜ì§€
 //			String name = sc.next();
 //			int kor = sc.nextInt();
 //			int eng = sc.nextInt();
 //			int math = sc.nextInt();
 //			stu.add(new Student(name, kor, eng, math));
 //			Student student = new Student(name, kor, eng, math);
-//			ÇØÁÖ°í stu.add(student); ÇØÁÖ´øÁö
+//			í•´ì£¼ê³  stu.add(student); í•´ì£¼ë˜ì§€
 		}
 	}
 
-//ÇĞ»ı ÀÌ¸§ ÀÔ·Â ½Ã ¼ºÀû Á¶È¸
+//í•™ìƒ ì´ë¦„ ì…ë ¥ ì‹œ ì„±ì  ì¡°íšŒ
 
 	public void search() {
 
-		System.out.println("ÇĞ»ı ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä. ¿¹)±èÁöÀº");
+		System.out.println("í•™ìƒ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”. ì˜ˆ)ê¹€ì§€ì€");
 
 		Scanner sc = new Scanner(System.in);
 
@@ -64,15 +64,15 @@ public class SungjukSet {
 
 			if (student.getName().equals(nameSearch)) {
 
-				System.out.println("±¹¾î Á¡¼ö: " + student.getKor());
+				System.out.println("êµ­ì–´ ì ìˆ˜: " + student.getKor());
 
-				System.out.println("¿µ¾î Á¡¼ö: " + student.getEng());
+				System.out.println("ì˜ì–´ ì ìˆ˜: " + student.getEng());
 
-				System.out.println("¼öÇĞ Á¡¼ö: " + student.getMath());
+				System.out.println("ìˆ˜í•™ ì ìˆ˜: " + student.getMath());
 
-				System.out.println("ÇÕ °è: " + student.getTotal());
+				System.out.println("í•© ê³„: " + student.getTotal());
 
-				System.out.println("Æò ±Õ: " + student.getAvg());
+				System.out.println("í‰ ê· : " + student.getAvg());
 
 			}
 
@@ -80,7 +80,7 @@ public class SungjukSet {
 
 	}
 
-//Æò±Õ 50Á¡ ÀÌ»óÀÎ ÇĞ»ıµé ÀÌ¸§ Ãâ·Â
+//í‰ê·  50ì  ì´ìƒì¸ í•™ìƒë“¤ ì´ë¦„ ì¶œë ¥
 
 	public void searchAvg50() {
 
@@ -96,7 +96,7 @@ public class SungjukSet {
 
 	}
 
-//ÀüÃ¼ ¸ñ·Ï Á¶È¸
+//ì „ì²´ ëª©ë¡ ì¡°íšŒ
 
 	public void showInfo() {
 
@@ -111,14 +111,14 @@ public class SungjukSet {
 
 	}
 
-// ¿øÇÏ´Â ÇĞ»ı »èÁ¦
+// ì›í•˜ëŠ” í•™ìƒ ì‚­ì œ
 	public void deleteInfo() {
-		System.out.print("»èÁ¦ÇÒ ÇĞ»ıÀÇ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+		System.out.print("ì‚­ì œí•  í•™ìƒì˜ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”: ");
 		Scanner sc = new Scanner(System.in);
 		String name = sc.next();
 		for (Student student : stu) {
 			if (student.getName().equals(name)) {
-				System.out.println(name+" ÇĞ»ı¿¡ ´ëÇÑ Á¤º¸°¡ »èÁ¦µË´Ï´Ù.");
+				System.out.println(name+" í•™ìƒì— ëŒ€í•œ ì •ë³´ê°€ ì‚­ì œë©ë‹ˆë‹¤.");
 				stu.remove(student);
 			}
 		}
@@ -127,9 +127,9 @@ public class SungjukSet {
 	public static void main(String[] args) {
 		System.out.println("-------------------------");
 
-		System.out.println("------¼ºÀûÃ³¸® ÇÁ·Î±×·¥-------");
+		System.out.println("------ì„±ì ì²˜ë¦¬ í”„ë¡œê·¸ë¨-------");
 
-		System.out.print("ÇĞ»ı ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+		System.out.print("í•™ìƒ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
 
 		Scanner sc = new Scanner(System.in);
 		
@@ -143,7 +143,7 @@ public class SungjukSet {
 
 		while (stop) {
 
-			System.out.println("1.ÇĞ»ı ¼ºÀû Á¶È¸ | 2.Æò±Õ 50Á¡ÀÌ»ó ÇĞ»ı Á¶È¸ | 3.ÀüÃ¼ ¸ñ·Ï Á¶È¸ | 4.Á¤º¸ »èÁ¦ | 5.ÇÁ·Î±×·¥ Á¾·á");
+			System.out.println("1.í•™ìƒ ì„±ì  ì¡°íšŒ | 2.í‰ê·  50ì ì´ìƒ í•™ìƒ ì¡°íšŒ | 3.ì „ì²´ ëª©ë¡ ì¡°íšŒ | 4.ì •ë³´ ì‚­ì œ | 5.í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 
 			int num = sc.nextInt();
 
@@ -165,12 +165,12 @@ public class SungjukSet {
 
 			} else if (num == 5) {
 
-				System.out.println("ÇÁ·Î±×·¥ÀÌ Á¾·áµË´Ï´Ù.");
+				System.out.println("í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë©ë‹ˆë‹¤.");
 
 				stop = false;
 
 			} else {
-				System.out.println("¼ıÀÚ 1ºÎÅÍ 5±îÁö Áß¿¡ ÀÔ·ÂÇØÁÖ¼¼¿ä. ");
+				System.out.println("ìˆ«ì 1ë¶€í„° 5ê¹Œì§€ ì¤‘ì— ì…ë ¥í•´ì£¼ì„¸ìš”. ");
 			}
 
 		}
