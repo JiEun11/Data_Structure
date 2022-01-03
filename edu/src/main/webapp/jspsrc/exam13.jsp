@@ -26,7 +26,7 @@ getContentType() : <%=  response.getContentType() %>
 getContextPath() : <%=  application.getContextPath()  %><br>
 getServerInfo() : <%=  application.getServerInfo()  %><br>
 getMajorVersion() : <%=  application.getMajorVersion()  %><br>
-<H4>Web Application(/sedu) 디렉토리의 파일 리스트 </H4>
+<H4>Web Application(/edu) 디렉토리의 파일 리스트 </H4>
 <% 
 java.util.Set<String> list = application.getResourcePaths("/");
 if (list != null) {
