@@ -13,12 +13,12 @@
 </head>
 <body>
 	<%
-	//LocalTime time = LocalTime.now();
-	Date date = new Date(session.getCreationTime());
+	
+	// Date date = new Date(session.getCreationTime()); //따라서 얘 필요 없음
 	SimpleDateFormat formatter1 = new SimpleDateFormat("HH시 mm분");
 	Calendar cal = Calendar.getInstance();
 	 
-	cal.setTime(date);
+	// cal.setTime(date); Calendar argument 없으면 현재 시스템 시간의 객체 생성
 	 
 	// 30분 더하기
 	cal.add(Calendar.MINUTE, 30);
@@ -26,10 +26,11 @@
 	%>
 	
 	<h2>
-	더 이상 응모할 수 없어요. 
+	더 이상 응모할 수 없어요.
+	</h2>
+	<h2>
 		<%= addMin  %>
 	이후에 응모하거나 브라우저를 재기동한 후에 응모하세요.
-	
 	</h2>
 </body>
 </html>
