@@ -6,9 +6,15 @@ import java.util.Scanner;
 
 public class Cafe {
 
-	private ArrayList<Coffee> al = new ArrayList<>();
-	// coffee class 타입으로 arraylist 객체 생성
-	int sum = 0;
+	// coffee class 타입으로 ArrayList 객체 al 생성
+	private ArrayList<Coffee> al; 
+	
+	public Cafe() {
+		al = new ArrayList<Coffee>();  // Coffee 타입의 Arraylist 객체를 Heap 메모리에 올림. 
+	}
+	
+	int sum = 0;	
+	
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
