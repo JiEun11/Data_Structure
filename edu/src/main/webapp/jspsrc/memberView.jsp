@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
- <%@ page import="vo.MemberVO" %>
+	pageEncoding="UTF-8"%>
+<%@ page import="vo.MemberVO"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,13 +13,14 @@
 	</nav>
 	<hr>
 	<%
-		MemberVO mv = (MemberVO)request.getAttribute("objmem");
+	//응답하면 사라짐. 요청시마다 MemberVO가 생성된다.
+	MemberVO mv = (MemberVO) request.getAttribute("objmem"); //Object --> MemberVO 강제 형변환 필수
 	%>
 	<ul>
-		<li>회원 이름 : <%= mv.getUsname() %></li>
-		<li>회원 계정 : <%= mv.getUsid() %></li>
-		<li>회원 암호 : <%= mv.getUspw() %></li>
-		<li>회원 전화번호 : <%= mv.getUsphoneNum() %></li>
+		<li>회원 이름 : <%=mv.getUsname()%></li>
+		<li>회원 계정 : <%=mv.getUsid()%></li>
+		<li>회원 암호 : <%=mv.getUspw()%></li>
+		<li>회원 전화번호 : <%=mv.getUsphoneNum()%></li>
 	</ul>
 </body>
 </html>

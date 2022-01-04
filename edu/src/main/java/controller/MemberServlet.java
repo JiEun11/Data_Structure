@@ -20,7 +20,7 @@ public class MemberServlet extends HttpServlet {
 		String usphoneNum = checkString(request.getParameter("usphoneNum"));
 		String usid = checkString(request.getParameter("usid"));
 		String uspw = checkString(request.getParameter("uspw"));
-		
+		request.setCharacterEncoding("utf-8");
 		MemberVO mv = new MemberVO();
 		
 		mv.setUsname(usname);
