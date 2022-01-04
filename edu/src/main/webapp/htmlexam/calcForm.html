@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>calcForm.html</title>
+</head>
+<script>
+
+</script>
+<body>
+	<nav>
+		<h2>연산할 두 개의 숫자를 입력하고 연산자를 선택하시오.</h2>
+	</nav>
+	<hr>
+	<section>
+		<form action="/edu/calculator" method="get">
+			<input type="number" name="num1"> 
+			
+			<input id=operator name=operator type=text list=operator_list>
+			<datalist id=operator_list>
+				<option value=add label=더하기>
+				<option value=subtract label=빼기>
+				<option value=multiple label=곱하기>
+				<option value=division label=나누기>
+			</datalist>
+			
+			<input type="number" name="num2">
+			
+			<input type="submit" value="계산하기"> 
+		</form>
+	</section>
+</body>
+</html>
