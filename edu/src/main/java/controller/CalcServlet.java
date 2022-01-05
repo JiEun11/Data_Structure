@@ -35,15 +35,16 @@ public class CalcServlet extends HttpServlet {
 				result= num1 / num2;
 				break;
 			}
+
+			request.setAttribute("objcal", result);
+			request.getRequestDispatcher("/jspsrc/calcResultEL.jsp").forward(request, response);	
+			
 		}catch(Exception e) {
 			request.setAttribute("objcal", errmsg);
 			request.getRequestDispatcher("/jspsrc/errorResultEL.jsp").forward(request, response);
 			
 		}
 		
-		
-		request.setAttribute("objcal", result);
-		request.getRequestDispatcher("/jspsrc/calcResultEL.jsp").forward(request, response);
 	}
 
 }
