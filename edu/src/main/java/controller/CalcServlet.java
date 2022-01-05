@@ -37,13 +37,13 @@ public class CalcServlet extends HttpServlet {
 			}
 		}catch(Exception e) {
 			request.setAttribute("objcal", errmsg);
-			request.getRequestDispatcher("/jspsrc/errorResult.jsp").forward(request, response);
+			request.getRequestDispatcher("/jspsrc/errorResultEL.jsp").forward(request, response);
 			
 		}
 		
 		
 		request.setAttribute("objcal", result);
-		request.getRequestDispatcher("/jspsrc/calcResult.jsp").forward(request, response);
+		request.getRequestDispatcher("/jspsrc/calcResultEL.jsp").forward(request, response);
 	}
 
 }

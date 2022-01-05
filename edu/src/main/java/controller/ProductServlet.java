@@ -40,7 +40,7 @@ public class ProductServlet extends HttpServlet {
 
 		}
 
-		request.getRequestDispatcher("/jspsrc/productView.jsp").forward(request, response);
+		request.getRequestDispatcher("/jspsrc/productViewEL.jsp").forward(request, response);
 
 	}
 

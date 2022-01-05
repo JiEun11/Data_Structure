@@ -30,7 +30,7 @@ public class MemberServlet extends HttpServlet {
 		
 		request.setAttribute("objmem", mv);
 		
-		request.getRequestDispatcher("/jspsrc/memberView.jsp").forward(request, response);
+		request.getRequestDispatcher("/jspsrc/memberViewEL.jsp").forward(request, response);
 	}
 	
 	public String checkString(String value) {
