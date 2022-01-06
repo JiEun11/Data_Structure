@@ -34,8 +34,8 @@
 %>
 			<tr>
 			<td class='<%= vo.getId() %>'><%= vo.getName() %></td>
-			<td class='<%= vo.getId() %>'><%= vo.getMeetingDate() %></td>
 			<td class='<%= vo.getId() %>'><%= vo.getTitle() %></td>
+			<td class='<%= vo.getId() %>'><%= vo.getMeetingDate() %></td>
 			<td><a href ='/mvc/meeting?action=delete&id=<%= vo.getId() %>'>
 			<img src = "/mvc/images/delete.png" width = '30'></a></td>
 			<td><img onclick="displayUpdateForm('<%= vo.getId() %>')" 
