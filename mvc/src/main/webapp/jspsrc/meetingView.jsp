@@ -17,7 +17,7 @@
 		background-color : pink;	
 		font-weight : bold;
 	}
-	td:nth-child(3){
+	td:nth-child(2){
 		width : 300px;
 	}
 </style>
