@@ -29,7 +29,7 @@ public class Generic {
 
 	public static void main(String[] args) {
 		Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(1));
-		Person<String> p2 = new Person<String>("부장");
+//		sPerson<String> p2 = new Person<String>("부장");
 //		p1.printInfo(e); 로 생략 가능 
 		
 
